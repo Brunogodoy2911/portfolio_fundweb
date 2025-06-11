@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <!-- Servidores de Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Fonte do Google - Poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -13,18 +23,21 @@
       content="portfólio, desenvolvedor, web, mobile, fullstack, Bruno Godoy, HTML CSS, JavaScript"
     />
     <link rel="icon" href="./assets/img/favicon.svg" />
+
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+
     <title>Portfólio do Bruno G. - Home</title>
   </head>
   <body>
-    <header>
-      <div id="header_content">
+    <header class="flex menu_container">
+      <div id="header_content" class="menu_content">
         <div id="titulo">
           <a href="#"> Universo </a>
         </div>
 
-        <div id="menu">
+        <div id="menu" class="flex">
           <nav>
-            <ul>
+            <ul class="menu_list">
               <li>
                 <a href="#"> Home </a>
               </li>
@@ -41,8 +54,8 @@
     </header>
 
     <main>
-      <section id="home">
-        <article id="home_texto">
+      <section id="home" class="flex home_container">
+        <article id="home_texto" class="flex home_content">
           <h4>Bem-vindo ao Novo Universo</h4>
           <h1>Mundo diferentes para pessoas diferentes</h1>
           <p>
@@ -51,12 +64,16 @@
             molestias quasi illum! Harum nulla sunt consequatur dolor dolores
             vero maxime obcaecati voluptates voluptate!
           </p>
-          <a href="https://github.com/Brunogodoy2911" target="_blank">
+          <a
+            href="https://github.com/Brunogodoy2911"
+            target="_blank"
+            class="botao"
+          >
             Explorar
           </a>
         </article>
 
-        <article id="home_imagem">
+        <article id="home_imagem" class="flex home_content">
           <img
             src="./assets/img/astronauta.svg"
             alt="Capacete do astronauta com animação"
@@ -64,7 +81,7 @@
         </article>
       </section>
 
-      <section id="about">
+      <section id="about" class="flex sobre_container">
         <img src="./assets/img/user_01.svg" alt="Foto do perfil do github" />
 
         <article id="about_texto">
@@ -76,31 +93,44 @@
             minima obcaecati debitis quos eveniet sed.
           </p>
 
-          <div id="about_github">
-            <a href="https://github.com/Brunogodoy2911">GitHub</a>
+          <div id="about_github" class="flex sobre_github">
+            <a
+              href="https://github.com/Brunogodoy2911"
+              target="_blank"
+              class="botao"
+              >GitHub</a
+            >
             <p>200 Seguidores</p>
             <p>20 Repositórios</p>
           </div>
         </article>
       </section>
 
-      <section id="contact">
-        <h4>Contate-me</h4>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
-          velit accusamus accusantium aut sit pariatur. Accusamus unde ut est
-          esse accusantium recusandae pariatur, excepturi inventore numquam
-          itaque mollitia sit quia?
-        </p>
+      <section id="contact" class="contato_container">
+        <article id="redes_sociais" class="contato_content">
+          <h4>Contate-me</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
+            velit accusamus accusantium aut sit pariatur. Accusamus unde ut est
+            esse accusantium recusandae pariatur, excepturi inventore numquam
+            itaque mollitia sit quia?
+          </p>
 
-        <div id="icones_redes_sociais">
-          <a href="www.linkedin.com/in/brunogodoydev" target="_blank">
-            <img src="./assets/img/linkedin.svg" alt="Ícone do LinkedIn" />
-          </a>
-          <a href="https://github.com/Brunogodoy2911" target="_blank">
-            <img src="./assets/img/github.svg" alt="Ícone do GitHub" />
-          </a>
-        </div>
+          <div id="icones_redes_sociais" class="social_container">
+            <a
+              href="https://www.linkedin.com/in/brunogodoydev/"
+              target="_blank"
+              class="social_icon"
+            >
+            </a>
+            <a
+              href="https://github.com/Brunogodoy2911"
+              target="_blank"
+              class="social_icon"
+            >
+            </a>
+          </div>
+        </article>
 
         <form action="" method="POST">
           <label for="nome">Nome</label>
@@ -136,10 +166,9 @@
             id="mensagem"
             name="mensagem"
             placeholder="Digite a sua mensagem..."
-          >
-          </textarea>
+          ></textarea>
 
-          <button type="submit">Enviar</button>
+          <button type="submit" class="botao">Enviar</button>
         </form>
       </section>
     </main>
