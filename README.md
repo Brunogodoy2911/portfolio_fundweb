@@ -1,50 +1,77 @@
-# Projeto Portfólio Pessoal
+# Portfólio Pessoal Dinâmico
 
-<div align="center"> 
-<img src="https://img.shields.io/badge/HTML-5-orange?style=for-the-badge&logo=html5" alt="HTML Badge" /> 
-<img src="https://img.shields.io/badge/CSS-3-blue?style=for-the-badge&logo=css3&logoColor=white" alt="CSS Badge" /> 
-<img src="https://img.shields.io/badge/JavaScript-ES6+-yellow?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript Badge" /> 
+<div align="center">
+  <img src="https://img.shields.io/badge/HTML-5-orange?style=for-the-badge&logo=html5" alt="HTML Badge" />
+  <img src="https://img.shields.io/badge/CSS-3-blue?style=for-the-badge&logo=css3&logoColor=white" alt="CSS Badge" />
+  <img src="https://img.shields.io/badge/JavaScript-ES6+-yellow?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript Badge" />
 </div>
 
-Este é o repositório do meu site portfólio pessoal, desenvolvido com HTML, CSS e JavaScript. O site inclui informações sobre mim, meus projetos, habilidades e formas de contato.
+<p align="center">
+  <a href="https://brunogodoy2911.github.io/portfolio_fundweb/"><strong>Acessar Demonstração »</strong></a>
+</p>
 
-## Tecnologias Utilizadas
+## Visão Geral
 
-- **HTML**: Estrutura de conteúdo e marcação do site.
-- **CSS**: Estilização e layout das páginas.
-- **JavaScript**: Funcionalidades e interatividade do site.
+Este é um projeto de site de portfólio pessoal de página única, projetado para ser moderno e responsivo. O diferencial deste portfólio é a sua capacidade de buscar e exibir informações de perfil diretamente da API do GitHub, como foto, biografia, número de seguidores e repositórios públicos.
 
-## Executando Localmente
+O projeto também inclui um formulário de contato funcional com validação de campos.
 
-Para visualizar o projeto localmente, siga as instruções abaixo:
+## ✨ Recursos
+
+- **Design Responsivo**: Totalmente adaptável para visualização em desktops e dispositivos móveis.
+- **Conteúdo Dinâmico**: A seção "Sobre mim" é preenchida automaticamente com dados da API do GitHub.
+- **Formulário de Contato**: Inclui um formulário com validação em JavaScript e utiliza o serviço [FormSubmit](https://formsubmit.co/) para o envio de e-mails.
+- **Estilização Moderna**: Interface limpa com uso de variáveis CSS para um tema de cores consistente.
+
+## 🛠️ Tecnologias Utilizadas
+
+- **HTML5**: Estrutura e semântica do conteúdo.
+- **CSS3**: Estilização, layout e responsividade.
+- **JavaScript (ES6+)**: Manipulação do DOM, validação de formulário e requisições à API do GitHub (`fetch`).
+
+## 🚀 Executando Localmente
+
+Para visualizar e testar o projeto em sua máquina local, siga os passos abaixo.
 
 ### Pré-requisitos
 
-- [Visual Studio Code](https://code.visualstudio.com/) (ou outro editor de sua preferência)
-- Extensão **Live Server** no VSCode
+- Um editor de código de sua preferência (ex: [Visual Studio Code](https://code.visualstudio.com/)).
+- A extensão **Live Server** para o VS Code (ou um servidor local similar).
 
 ### Passos
 
-1. Clone o repositório:
-```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-```
-2. Abra o projeto no Visual Studio Code:
-   ```bash
-   code seu-repositorio
-```
-3. No VSCode, abra um arquivo HTML do projeto (ex: `index.html`).
-4. Clique com o botão direito no editor e selecione **"Open with Live Server"**.  
-   - Alternativamente, você pode iniciar o **Live Server** através da barra de status do VSCode.
+1.  Clone o repositório para a sua máquina:
+    ```bash
+    git clone [https://github.com/Brunogodoy2911/portfolio_fundweb.git](https://github.com/Brunogodoy2911/portfolio_fundweb.git)
+    ```
+2.  Abra a pasta do projeto no Visual Studio Code:
+    ```bash
+    cd portfolio_fundweb
+    code .
+    ```
+3.  Com o arquivo `index.html` aberto, clique com o botão direito e selecione a opção **"Open with Live Server"**.
 
-Isso abrirá o site em seu navegador padrão, e você poderá visualizar e testar as alterações em tempo real.
+Isso abrirá o site no seu navegador padrão.
 
-## Deploy
+## ⚙️ Como Usar
 
-Este site está disponível publicamente através do **GitHub Pages**. Você pode acessar a versão online pelo link abaixo:
+Para adaptar este portfólio para seu próprio uso, você precisará alterar:
 
-- [Portfólio Pessoal](https://seu-usuario.github.io/seu-repositorio)
+1.  **API do GitHub**: No arquivo `assets/js/script.js`, altere o nome de usuário na URL da API para o seu:
+    ```javascript
+    // Linha 6
+    const dadosPerfil = await fetch(
+      `https://api.github.com/users/SEU_USUARIO_AQUI`
+    );
+    ```
 
-## Contribuindo
+2.  **Formulário de Contato**: No arquivo `index.html`, substitua o endpoint na `action` do formulário pelo seu link do FormSubmit:
+    ```html
+    <form
+      action="[https://formsubmit.co/SEU_EMAIL_AQUI](https://formsubmit.co/SEU_EMAIL_AQUI)"
+      method="POST"
+      id="formulario"
+    >
+    ```
 
-Contribuições são bem-vindas! Se você tiver sugestões ou melhorias, sinta-se à vontade para abrir um **pull request**.
+3.  **Links das Redes Sociais**: Atualize os links para seu LinkedIn e GitHub no arquivo `index.html`.
