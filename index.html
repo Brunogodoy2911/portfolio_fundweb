@@ -45,7 +45,7 @@
                 <a href="#about"> Sobre </a>
               </li>
               <li>
-                <a href="#contact"> Contatos </a>
+                <a href="#contact"> Contato </a>
               </li>
             </ul>
           </nav>
@@ -81,30 +81,7 @@
         </article>
       </section>
 
-      <section id="about" class="flex sobre_container">
-        <img src="./assets/img/user_01.svg" alt="Foto do perfil do github" />
-
-        <article id="about_texto">
-          <h1>Sobre mim</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-            delectus unde, voluptatibus veritatis perspiciatis sequi vitae
-            magnam assumenda consectetur, ab ratione aliquid aut voluptates
-            minima obcaecati debitis quos eveniet sed.
-          </p>
-
-          <div id="about_github" class="flex sobre_github">
-            <a
-              href="https://github.com/Brunogodoy2911"
-              target="_blank"
-              class="botao"
-              >GitHub</a
-            >
-            <p>200 Seguidores</p>
-            <p>20 Repositórios</p>
-          </div>
-        </article>
-      </section>
+      <section id="about" class="flex sobre_container"></section>
 
       <section id="contact" class="contato_container">
         <article id="redes_sociais" class="contato_content">
@@ -132,7 +109,18 @@
           </div>
         </article>
 
-        <form action="" method="POST">
+        <form
+          action="https://formsubmit.co/6a49da30dae2a2ba93e37522f8135793"
+          method="POST"
+          id="formulario"
+        >
+          <input
+            type="hidden"
+            name="_next"
+            value="https://brunogodoy2911.github.io/portfolio_fundweb/sucess"
+          />
+          <input type="hidden" name="_captcha" value="false" />
+
           <label for="nome">Nome</label>
           <input
             id="nome"
@@ -174,5 +162,7 @@
     </main>
 
     <footer>Feito com ❤️ por Bruno Godoy - 2025</footer>
+
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
